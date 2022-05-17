@@ -1,50 +1,76 @@
 import { Client } from "discord.js";
+import { Message } from "discord.js";
 
 export type RamTypes = 'MB' | 'GB'
+export type errorTypes = 'reply' | 'send'
 
 export class JDaniel_Util {
     /**
-    * Discord Client.
+    * Cliente de Discord.
     */
     constructor(client: Client);
     /**
-    * Generate a random number.
+    * Generas un Numero al azar.
     */
     public random(min: number, max: number): number;
     /**
-    * Get one or more random items from an array.
+    * Obtiene uno o más items de un array al azar.
     */
-    public randomText(arr: any[], length?: number): any[];
+    public randomText(array: any[], length?: number): any[];
     /**
-    * Generate a random string with custom length.
+    * Genera un texto al azar de la longitud que desees.
     */
     public randomString(length: number): string;
     /**
-    * Get ram usage in MB or GB.
+    * Obtiene el uso de Memoria RAM en MB y GB.
     */
-    public ramUsage(decimals?: number, type: RamTypes): string;
+    public ramUsage(decimals?: number, format?: RamTypes): string;
     /**
-    * Get cpu usage.
+    * Obtiene el uso de CPU.
     */
     public cpuUsage(decimals?: number): string;
     /**
-    * Load commands in a folder and add a commands property to client class.
+    * Carga los comandos en una carpeta y añade una propiedad de comandos a la clase cliente.
     */
     public loadCommands(client: Client, path: string): void;
     /**
-    * Get random meme.
+    * Meme al Azar.
     */
     public meme(): string;
     /**
-    * Fetch guild member.
+    * Obtiene la información de un Miembro.
     */
-   public getMember(message: object, id: string, returnAuthor?: boolean): object;
-   /**
-   * Fetch discord user.
-   */
-   public getUser(message: object, id: string, returnAuthor?: boolean): object
-   /**
-   * Fetch Api.
-   */
-   public fetch(URL: string, headers?: object): object
+    public getMember(message: Message, id: string, returnAuthor?: boolean): object;
+    /**
+    * Obtiene la información de un Usuario.
+    */
+    public getUser(message: Message, id: string, returnAuthor?: boolean): object
+    /**
+    * Obtene el JSON de una Api.
+    */
+    public fetch(URL: string, headers?: object): object
+    /**
+    * Crea aun Array con un String reemplaznado los espacios.
+    */
+    public argsIfy(message: Message, prefix: string): object
+    /**
+    * Obtiene una Imagen al azar de Rei Chiquita (En Español).
+    */
+    public rei(): string
+    /**
+    * Envia un Error.
+    */
+    public error(message: Message, error: string, type?: errorTypes): void
+    /**
+    * Compruebe si su texto tiene alguna palabra especificada.
+    */
+    public has(array: any[], message: string): boolean
+    /**
+    * Recuento real de los Usuarios que utilizan su Bot de Discord.
+    */
+    public allMembersCount(client: Client): number
+    /**
+    * Busqueda en la Rule34.
+    */
+    public rule34(busqueda?: string): object
 } 

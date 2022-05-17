@@ -41,6 +41,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client({
     intents: 32511
 })
+const JDaniel_Util = require('@jdaniel-dev/utils.js')
+const util = new JDaniel_Util(client)
 
 client.comandos = new Discord.Collection()
 util.loadCommands(client,'comandos')
@@ -51,12 +53,81 @@ client.on('ready', () => {
 
 client.on('message', async(message) => {
     if(message.author.bot || message.channel.type === 'dm') return;
-    if(message.content === 'ping') {
+    const prefix = '!'
+    if(message.content.toLowerCase() === 'hola'){
+        message.channel.send(`Hola <@${message.author.id}>`)
+    }
+    if(!message.content.startsWith(prefix)) return;
+    cons args = util.functions.argsIfy(message, prefix)
+    if(message.content.toLowerCase().slice(prefix.length) === 'ping') {
        message.channel.send(`Pong! ${client.ws.ping}ms`)
+    }
+    if(message.content.toLowerCase().slice(prefix.length) === 'random') {
+        message.channel.send(`Numero al azar entre el 0 y 9: ${util.functions.random(0, 9)}`)
+    }
+    if(message.content.toLowerCase().slice(prefix.length) === 'status') {
+        message.channel.send(`CPU: ${util.functions.cpuUsage()}% \nRAM: ${util.functions.ramUsage()}`)
+    }
+    if(message.content.toLowerCase().slice(prefix.length) === 'say') {
+        if(!args) return message.channel.send('Escribe el texto que quieres que diga!')
+        message.channel.send(args)
+    }
+    if(message.content.toLowerCase().slice(prefix.length) === 'rei') {
+        message.channel.send(util.functions.rei())
     }
 });
 
 client.login('token');//El token se consigue en el Developers Portal
+```
+
+# Funciones
+```js
+<util>.random(min, max)
+```
+```js
+<util>.randomText(['array1', 'array2'...], 1)
+```
+```js
+<util>.randomString(length)
+```
+```js
+<util>.ramUsage()
+```
+```js
+<util>.cpuUsage()
+```
+```js
+async <util>.loadCommands(client,'comandos')
+```
+```js
+async <util>.getMember(message, d.args)
+```
+```js
+async <util>.getUser(message, d.args)
+```
+```js
+<util>.meme()
+```
+```js
+async <util>.fetch(URL)
+```
+```js
+<util>.argsIfy(message)
+```
+```js
+<util>.rei()
+```
+```js
+<util>.error(message, error)
+```
+```js
+<util>.has(array, message)
+```
+```js
+<util>.allMembersCount(client)
+```
+```js
+async <util>.rule34(busqueda)
 ```
 
 # Soporte
