@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JDaniel4562/utils.js.git"
+    "url": "git+https://github.com/JDaniel4562/-jdaniel-dev-utils.js.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JDaniel4562/utils.js/issues"
+    "url": "https://github.com/JDaniel4562/-jdaniel-dev-utils.js/issues"
   },
-  "homepage": "https://github.com/JDaniel4562/utils.js#readme",
+  "homepage": "https://github.com/JDaniel4562/-jdaniel-dev-utils.js#readme",
   "dependencies": {
     "discord.js": "^13.7.0",
     "fs": "^0.0.1-security",
