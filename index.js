@@ -13,11 +13,27 @@ class JDaniel_Util {
 		this.version = version,
 		this.update = () => {
 			const { execSync } = require('child_process')
-			return execSync(`npm i @jdaniel-dev/utils.js@latest`).toString()
+			const res = execSync(`npm i @jdaniel-dev/utils.js@latest`).toString()
+			console.log(res)
+			return res
 		},
 		this.client = client,
 		this.testing = {
 			
+		},
+		this.reboot = () => {
+			try {
+				process.on("exit", () => {
+					require("child_process").spawn(process.argv.shift(), process.argv, {
+						cwd: process.cwd(),
+						detached: true,
+						stdio: "inherit",
+					});
+				});
+				process.exit();
+			} catch (e) {
+				return d.error(`\`Unable to Restart! Error: ${e.message}\``);
+			}
 		},
 		this.random = (min, max) => {
 			if(typeof min !== 'number') throw new Error(`[${packageName} Error] No se dió el Minimo`)
