@@ -77,4 +77,8 @@ export class JDaniel_Util {
     * Busqueda en la Rule34.
     */
     public rule34(busqueda?: string): object
+    /**
+    * Haces una operación matemática.
+    */
+    public math(op: number): number
 } 
