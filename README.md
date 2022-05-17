@@ -1,13 +1,21 @@
-# Sobre
+<div align="center">
+  <p>
+    <a href="https://discord.gg/nB2Je6jjbs"><img src="https://img.shields.io/discord/875100568169889894?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
+    <a href="https://www.npmjs.com/package/@jdaniel-dev/utils.js"><img src="https://img.shields.io/npm/v/@jdaniel-dev/utils.js.svg?maxAge=3600" alt="npm version" /></a>
+    <a href="https://www.npmjs.com/package/@jdaniel-dev/utils.js"><img src="https://img.shields.io/npm/dt/@jdaniel-dev/utils.js.svg?maxAge=3600" alt="npm downloads" /></a>
+  </p>
+</div>
+
+## Sobre
 Este Package fue hecho para facilitar todo lo relacionado con el desarrollo de bots de discord, con un util ya hecho para quien guste
 Base del utils sacado de [Tohru](https://tohru.ga/)
 
-# Instalando el Package
+## Instalando el Package
 ```
 npm i @jdaniel-dev/utils.js
 ```
 
-# Utilizando el Package
+## Utilizando el Package
 ```js
 const JDaniel_Util = require('@jdaniel-dev/utils.js')
 const util = new JDaniel_Util()
@@ -17,7 +25,7 @@ client.util = new JDaniel_Util()
 **/
 ```
 
-# Command Handler
+## Command Handler
 Depende de como lo definiste pero este sería un ejemplo
 ```js
 const JDaniel_Util = require('@jdaniel-dev/utils.js')
@@ -35,7 +43,7 @@ client.commands = new Discord.Collection()
 client.cmd = new Discord.Collection()
 ```
 
-# Bot de Ejemplo (Con Command handler)
+## Bot de Ejemplo (Con Command handler)
 ```js
 const Discord = require('discord.js');
 const client = new Discord.Client({
@@ -80,7 +88,7 @@ client.on('message', async(message) => {
 client.login('token');//El token se consigue en el Developers Portal
 ```
 
-# Funciones
+## Funciones
 ```js
 <util>.update()
 ```
