@@ -32,7 +32,7 @@ class JDaniel_Util {
 				});
 				process.exit();
 			} catch (e) {
-				return d.error(`\`Unable to Restart! Error: ${e.message}\``);
+				throw new Error(`[${packageName} Error] No podimos reiniciar! Error: ${e.message}`)
 			}
 		},
 		this.random = (min, max) => {
