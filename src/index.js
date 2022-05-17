@@ -1,6 +1,6 @@
-const config = require('./config.js')
-const packageName = config.packageName
-const package = require('./package.json')
+const config = require('./config.js');
+const packageName = 'Utils';
+const package = require('../package.json');
 const version = package.version
 
 /**
@@ -166,7 +166,7 @@ class JDaniel_Util {
 			return args.slice(1)
 		},
 		this.rei = () => {
-			const images = require('./images/rei.js')
+			const images = require('../images/rei.js')
 			return images[Math.floor(Math.random() * images.length)]
 		},
 		this.error = (message, error, type='reply') => {

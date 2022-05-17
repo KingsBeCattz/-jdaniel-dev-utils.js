@@ -85,6 +85,9 @@ client.login('token');//El token se consigue en el Developers Portal
 <util>.update()
 ```
 ```js
+<util>.reboot()
+```
+```js
 <util>.random(min, max)
 ```
 ```js

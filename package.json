@@ -2,8 +2,8 @@
   "name": "@jdaniel-dev/utils.js",
   "version": "1.7.91",
   "description": "Este Package fue hecho para facilitar todo lo relacionado con el desarrollo de bots de discord, con un util ya hecho para quien guste",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
