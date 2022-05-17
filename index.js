@@ -13,7 +13,7 @@ class JDaniel_Util {
 		this.version = version,
 		this.update = () => {
 			const { execSync } = require('child_process')
-			return execSync(`npm i ${package.name}@latest`).toString()
+			return execSync(`npm i @jdaniel-dev/utils.js@latest`).toString()
 		},
 		this.client = client,
 		this.testing = {
