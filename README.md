@@ -1,4 +1,9 @@
 <div align="center">
+  <br />
+    <p>
+      <img src="https://cdn.discordapp.com/attachments/862513652103512115/976011664564555816/Banner_2.png" alt="@jdaniel-dev/utils.js">
+    <p>
+  <br />
   <p>
     <a href="https://discord.gg/nB2Je6jjbs"><img src="https://img.shields.io/discord/875100568169889894?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
     <a href="https://www.npmjs.com/package/@jdaniel-dev/utils.js"><img src="https://img.shields.io/npm/v/@jdaniel-dev/utils.js.svg?maxAge=3600" alt="npm version" /></a>
