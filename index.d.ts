@@ -10,9 +10,13 @@ export class JDaniel_Util {
     */
     constructor(client: Client);
     /**
+    * Actualizas el package.
+    */
+    public update(min: number, max: number): number;
+    /**
     * Generas un Numero al azar.
     */
-    public random(min: number, max: number): number;
+    public random(version?: string): string;
     /**
     * Obtiene uno o más items de un array al azar.
     */
