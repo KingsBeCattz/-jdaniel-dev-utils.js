@@ -15,12 +15,12 @@
 Este Package fue hecho para facilitar todo lo relacionado con el desarrollo de bots de discord, con un util ya hecho para quien guste
 Base del utils sacado de [Tohru](https://tohru.ga/)
 
-## Instalando el Package
+## - Instalando el Package
 ```
 npm i @jdaniel-dev/utils.js
 ```
 
-## Utilizando el Package
+## - Utilizando el Package
 ```js
 const JDaniel_Util = require('@jdaniel-dev/utils.js')
 const util = new JDaniel_Util()
@@ -48,7 +48,7 @@ client.commands = new Discord.Collection()
 client.cmd = new Discord.Collection()
 ```
 
-## Bot de Ejemplo (Con Command handler)
+## - Bot de Ejemplo (Sin Command handler)
 ```js
 const Discord = require('discord.js');
 const client = new Discord.Client({
@@ -56,9 +56,6 @@ const client = new Discord.Client({
 })
 const JDaniel_Util = require('@jdaniel-dev/utils.js')
 const util = new JDaniel_Util(client)
-
-client.comandos = new Discord.Collection()
-util.loadCommands(client,'comandos')
 
 client.on('ready', () => {
     console.log('Bot Inicializado')
@@ -93,7 +90,61 @@ client.on('message', async(message) => {
 client.login('token');//El token se consigue en el Developers Portal
 ```
 
-## Funciones
+## - Bot de Ejemplo (Con Command Handler)
+```js
+const Discord = require('discord.js');
+const client = new Discord.Client({
+    intents: 32511
+})
+const JDaniel_Util = require('@jdaniel-dev/utils.js')
+const util = new JDaniel_Util(client)
+
+client.comandos = new Discord.Collection()
+util.loadCommands(client,'comandos')
+
+client.on('ready', () => {
+    console.log('Bot Inicializado')
+});
+
+client.on('message', async(message) => {
+    if(message.author.bot || message.channel.type === 'dm') return;
+    const prefix = '!'
+    if(!prefix.some(p => message.content.startsWith(p))) return;
+    const args = message.content.slice(prefix.length).trim().split(/ +/)
+    const commandName = args.shift().toLowerCase()
+    const command = client.comandos.get(commandName) || client.comandos.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
+    const JDaniel_Util = require('@jdaniel-dev/utils.js')
+    const util = new JDaniel_Util(client)
+    if(!command) return;
+    const d = {
+      message,
+      client,
+      args,
+      util
+    };
+    try {
+      command.execute(d)
+    } catch (e) {
+      console.log(e)
+    }
+});
+
+client.login('token');//El token se consigue en el Developers Portal
+```
+## - Base de Comando (Del Handler)
+```js
+const { Discord, MessageEmbed, MessageAttachment } = require('discord.js')
+
+module.exports = {
+  name: "", //Nombre de Tu comando
+  aliases: [], //Alias de tu comandos (Este es en Array)
+  async execute(d){
+    //Aquí el codigo, si se evalua d, este retornara args, client y message
+  }
+}
+```
+
+## - Funciones
 ```js
 <util>.update()
 ```
