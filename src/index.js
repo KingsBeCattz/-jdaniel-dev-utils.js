@@ -19,7 +19,9 @@ class JDaniel_Util {
 		},
 		this.client = client,
 		this.testing = {
-			
+			random(min, max){
+				require('./functions/random.js')(min, max)
+			}
 		},
 		this.reboot = () => {
 			try {
@@ -219,6 +221,23 @@ class JDaniel_Util {
 			const operators = ['+','-','*','/','(',')','0','1','2','3','4','5','6','7','8','9']
 			if(!operators.some(filter => op.toString().includes(filter))) throw new Error(`[${packageName} Error] Se han utilizado operadores invalidos`)
 			return Number(op)
+		},
+		this.isHex = (hex) => {
+			if(!hex || typeof hex !== 'string') return false
+			const code = hex.replace(/(#)/g, '')
+			const regex = new RegExp("^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$")
+			return regex.test(code)
+		},
+		this.isSnowflake = (snowflake) => {
+			if(!snowflake || typeof snowflake !== 'string') return false
+			if(snowflake.length > 18 || snowflake.length < 18) return false
+			if(!Number(snowflake)) return false
+			return true
+		},
+		this.isBanned = (user, guild) => {
+			if(!user || typeof user !== 'object') throw new Error(`[${packageName} Error] No se dió un usuario valido`)
+			if(!guild || typeof guild !== 'object') throw new Error(`[${packageName} Error] No se dió un servidor valido`)
+			return guild.bans.fetch(user.id)?false:true
 		}
 	}
 }

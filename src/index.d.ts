@@ -81,4 +81,16 @@ export class JDaniel_Util {
     * Haces una operación matemática.
     */
     public math(op: number): number
+    /**
+    * Verificas si algo es Hex.
+    */
+    public isHex(hex: string): boolean
+    /**
+    * Verificas si algo es un snowflake.
+    */
+    public isSnowflake(snowflake: string): boolean
+    /**
+    * Verificas si algo esta baneado.
+    */
+    public isBanned(user: object, guild: object): boolean
 } 

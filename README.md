@@ -11,7 +11,7 @@
   </p>
 </div>
 
-## Sobre
+## - Sobre
 Este Package fue hecho para facilitar todo lo relacionado con el desarrollo de bots de discord, con un util ya hecho para quien guste
 Base del utils sacado de [Tohru](https://tohru.ga/)
 
@@ -30,7 +30,7 @@ client.util = new JDaniel_Util()
 **/
 ```
 
-## Command Handler
+## - Command Handler
 Depende de como lo definiste pero este sería un ejemplo
 ```js
 const JDaniel_Util = require('@jdaniel-dev/utils.js')
@@ -200,5 +200,5 @@ async <util>.fetch(URL)
 async <util>.rule34(busqueda)
 ```
 
-# Soporte
+## - Soporte
 [Server](https://discord.gg/nB2Je6jjbs) (El Servidor es de Soporte de Tohru, pero sera también Utilizado para Soporte de este package)
