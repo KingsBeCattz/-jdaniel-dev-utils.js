@@ -93,4 +93,8 @@ export class JDaniel_Util {
     * Verificas si algo esta baneado.
     */
     public isBanned(user: object, guild: object): boolean
+    /**
+    * Verificas si votó por tu bot en Top.gg.
+    */
+    public isVoted(user: object, token: string): boolean
 } 

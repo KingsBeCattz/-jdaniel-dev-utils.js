@@ -199,6 +199,21 @@ async <util>.fetch(URL)
 ```js
 async <util>.rule34(busqueda)
 ```
+```js
+<util>.math(operación)
+```
+```js
+<util>.isHex(Color en Hexadecimal)
+```
+```js
+<util>.isSnowflake(ID)
+```
+```js
+<util>.isBanned(Usuario (El Objeto de un usuario de discord), Servidor (El Objeto de un servidor de discord))
+```
+```js
+async <util>.isVoted(Usuario (El Objeto de un usuario de discord), Token de Top.gg)
+```
 
 ## - Soporte
 [Server](https://discord.gg/nB2Je6jjbs) (El Servidor es de Soporte de Tohru, pero sera también Utilizado para Soporte de este package)

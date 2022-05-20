@@ -238,6 +238,14 @@ class JDaniel_Util {
 			if(!user || typeof user !== 'object') throw new Error(`[${packageName} Error] No se dió un usuario valido`)
 			if(!guild || typeof guild !== 'object') throw new Error(`[${packageName} Error] No se dió un servidor valido`)
 			return guild.bans.fetch(user.id)?false:true
+		},
+		this.isVoted = async (user, token) => {
+			const fetch = require('node-fetch')
+			let first = await fetch(`https://top.gg/api/bots/862482131375489054/check?userId=${user.id}`, {headers: {
+				"Authorization": token
+			}})
+			let json = await first.json()
+			return json.voted ? true: false
 		}
 	}
 }
