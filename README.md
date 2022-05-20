@@ -68,22 +68,22 @@ client.on('message', async(message) => {
         message.channel.send(`Hola <@${message.author.id}>`)
     }
     if(!message.content.startsWith(prefix)) return;
-    cons args = util.functions.argsIfy(message, prefix)
+    cons args = util.argsIfy(message, prefix)
     if(message.content.toLowerCase().slice(prefix.length) === 'ping') {
        message.channel.send(`Pong! ${client.ws.ping}ms`)
     }
     if(message.content.toLowerCase().slice(prefix.length) === 'random') {
-        message.channel.send(`Numero al azar entre el 0 y 9: ${util.functions.random(0, 9)}`)
+        message.channel.send(`Numero al azar entre el 0 y 9: ${util.random(0, 9)}`)
     }
     if(message.content.toLowerCase().slice(prefix.length) === 'status') {
-        message.channel.send(`CPU: ${util.functions.cpuUsage()}% \nRAM: ${util.functions.ramUsage()}`)
+        message.channel.send(`CPU: ${util.cpuUsage()}% \nRAM: ${util.ramUsage()}`)
     }
     if(message.content.toLowerCase().slice(prefix.length) === 'say') {
         if(!args) return message.channel.send('Escribe el texto que quieres que diga!')
-        message.channel.send(args)
+        message.channel.send(args.join(' '))
     }
     if(message.content.toLowerCase().slice(prefix.length) === 'rei') {
-        message.channel.send(util.functions.rei())
+        message.channel.send(util.rei())
     }
 });
 

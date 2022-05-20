@@ -3,6 +3,7 @@ import { Message } from "discord.js";
 
 export type RamTypes = 'MB' | 'GB'
 export type errorTypes = 'reply' | 'send'
+export type argsIfyTypes = Message | string
 
 export class JDaniel_Util {
     /**
@@ -56,7 +57,7 @@ export class JDaniel_Util {
     /**
     * Crea aun Array con un String reemplaznado los espacios.
     */
-    public argsIfy(message: Message, prefix: string): object
+    public argsIfy(message: argsIfyTypes): object
     /**
     * Obtiene una Imagen al azar de Rei Chiquita (En Español).
     */

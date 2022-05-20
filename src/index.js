@@ -162,10 +162,16 @@ class JDaniel_Util {
 			}
 		},
 		this.argsIfy = (message) => {
-			if(!message || typeof message !== 'object') throw new Error(`[${packageName} Error] No se dió el Message (https://discord.js.org/#/docs/discord.js/stable/class/Message)`)
-			if(!message.content) return null
-			let args = message.content?.slice().trim().split(/ +/)
-			return args.slice(1)
+			if(!message || typeof message !== 'object') throw new Error(`[${packageName} Error] No se dió el Message (Puede ser un string o un Message (https://discord.js.org/#/docs/discord.js/stable/class/Message))`)
+			if(!message.content && typeof message === 'string'){
+				if(!message.content) return null
+				let args = message.slice().trim().split(/ +/)
+				return args
+			} else {
+				if(!message.content) return null
+				let args = message.content?.slice().trim().split(/ +/)
+				return args
+			}
 		},
 		this.rei = () => {
 			const images = require('../images/rei.js')
