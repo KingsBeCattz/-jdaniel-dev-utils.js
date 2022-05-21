@@ -98,4 +98,8 @@ export class JDaniel_Util {
     * Verificas si votó por tu bot en Top.gg.
     */
     public isVoted(user: object, token: string): boolean
+    /**
+    * Obtienes la información de un webhook (Funciona similar a un Canal (https://discord.js.org/#/docs/discord.js/stable/class/WebhookClient)).
+    */
+    public getWebhook(url: string): object
 } 

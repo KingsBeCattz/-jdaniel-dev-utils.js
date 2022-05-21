@@ -1,6 +1,6 @@
 {
   "name": "@jdaniel-dev/utils.js",
-  "version": "1.8.5",
+  "version": "1.8.6",
   "description": "Este Package fue hecho para facilitar todo lo relacionado con el desarrollo de bots de discord, con un util ya hecho para quien guste",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",

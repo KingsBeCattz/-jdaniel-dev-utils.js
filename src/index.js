@@ -18,11 +18,6 @@ class JDaniel_Util {
 			return res
 		},
 		this.client = client,
-		this.testing = {
-			random(min, max){
-				require('./functions/random.js')(min, max)
-			}
-		},
 		this.reboot = () => {
 			try {
 				process.on("exit", () => {
@@ -252,6 +247,16 @@ class JDaniel_Util {
 			}})
 			let json = await first.json()
 			return json.voted ? true: false
+		},
+		this.getWebhook = (url) => {
+			try {
+				const webhook = new Discord.WebhookClient({
+					url: url
+				})
+				return webhook
+			} catch (e) {
+				return undefined
+			}
 		}
 	}
 }
