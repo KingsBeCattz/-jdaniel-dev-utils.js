@@ -7,7 +7,9 @@ const version = package.version
 Ya que estas aquí, unete!
 https://discord.gg/nB2Je6jjbs
 */
-
+function test(){
+	return e
+}
 class JDaniel_Util {
 	constructor (client) {
 		this.version = version,
@@ -126,12 +128,8 @@ class JDaniel_Util {
 			return m
 		},
 		this.meme = () => {
-			const shinobumemes = require('shinobu-memes')
-			const spanish = require('spanish.memes')
-			let memes = []
-			memes.push(shinobumemes.Shinobumemes().replace('media.discordapp','cdn.discordapp').replace('discordapp.net','discordapp.com'))
-			memes.push(spanish.Meme().replace('media.discordapp','cdn.discordapp').replace('discordapp.net','discordapp.com'))
-			return memes[Math.floor(Math.random() * memes.length)]
+			const images = require('./images/memes.js')
+			return images[Math.floor(Math.random() * images.length)]
 		},
 		this.soi = async () => {
 			const fetch = require('node-fetch')
@@ -169,7 +167,7 @@ class JDaniel_Util {
 			}
 		},
 		this.rei = () => {
-			const images = require('../images/rei.js')
+			const images = require('./images/rei.js')
 			return images[Math.floor(Math.random() * images.length)]
 		},
 		this.error = (message, error, type='reply') => {
@@ -258,6 +256,7 @@ class JDaniel_Util {
 				return undefined
 			}
 		}
+		this.test = test
 	}
 }
 module.exports = JDaniel_Util
