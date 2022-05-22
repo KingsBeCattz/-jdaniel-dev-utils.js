@@ -1,4 +1,4 @@
-const config = require('../../config.js');
+const config = require('../config.js');
 const packageName = config.packageName
 
 function random(min, max){

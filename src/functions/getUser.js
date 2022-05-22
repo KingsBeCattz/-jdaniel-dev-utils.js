@@ -1,4 +1,4 @@
-const config = require('../../config.js');
+const config = require('../config.js');
 const packageName = config.packageName
 
 async function getUser(message, id, returnAuthor=false){
