@@ -33,11 +33,11 @@ client.util = new JDaniel_Util()
 # - Command Handler
 Depende de como lo definiste pero este sería un ejemplo
 ```js
-const JDaniel_Util = require('@jdaniel-dev/utils.js')
-const util = new JDaniel_Util()
+const JDaniel_Util = require('@jdaniel-dev/utils.js') //Llamamos el Paquete
+const util = new JDaniel_Util() //Creas una nueva istancia del Paquete
 
-client.comandos = new Discord.Collection()
-util.loadCommands(client,'comandos')
+client.comandos = new Discord.Collection()  //Creas el Map Collection donde se guardaran los comandos
+util.loadCommands(client,'comandos')  //Cargas todos los comandos en la carpeta 'comandos'
 ```
 Tambien te puede dar un error, ya que en el `index.js` no tienes definido los comandos, si es que si, debes cambiarlo a `comandos`, Ejemplo:
 ```js
@@ -50,10 +50,10 @@ client.cmd = new Discord.Collection()
 
 # - Bot de Ejemplo (Sin Command handler)
 ```js
-const Discord = require('discord.js');
+const Discord = require('discord.js'); //Llamamos el paquete de discord
 const client = new Discord.Client({
     intents: 32511
-})
+}) //Creas el cliente de discord
 const JDaniel_Util = require('@jdaniel-dev/utils.js')
 const util = new JDaniel_Util(client)
 
@@ -68,7 +68,7 @@ client.on('message', async(message) => {
         message.channel.send(`Hola <@${message.author.id}>`)
     }
     if(!message.content.startsWith(prefix)) return;
-    cons args = util.argsIfy(message, prefix)
+    cons args = util.argsIfy(message)
     if(message.content.toLowerCase().slice(prefix.length) === 'ping') {
        message.channel.send(`Pong! ${client.ws.ping}ms`)
     }
@@ -213,6 +213,9 @@ async <util>.rule34(busqueda)
 ```
 ```js
 async <util>.isVoted(Usuario (El Objeto de un usuario de discord), Token de Top.gg)
+```
+```js
+<util>.getWebhook(URL (URL del Webhook)) //Funciona similar a un canal (https://discord.js.org/#/docs/discord.js/stable/class/WebhookClient)
 ```
 
 # - Soporte
