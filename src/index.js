@@ -10,6 +10,8 @@ https://discord.gg/nB2Je6jjbs
 
 class JDaniel_Util {
 	constructor (client) {
+		if(!client) throw new Error(`[${packageName} Error] No se dió el Cliente (https://discord.js.org/#/docs/discord.js/stable/class/Client)`)
+
 		this.version = version,
 		this.update = require('./functions/util/update.js')
 		this.reboot = require('./functions/util/reboot.js')
