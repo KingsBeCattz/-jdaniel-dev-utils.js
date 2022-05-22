@@ -10,12 +10,13 @@ https://discord.gg/nB2Je6jjbs
 
 class JDaniel_Util {
 	constructor (client) {
+		super()
 		if(!client) throw new Error(`[${packageName} Error] No se dió el Cliente (https://discord.js.org/#/docs/discord.js/stable/class/Client)`)
 
-		this.version = version,
+		this.version = version
 		this.update = require('./functions/util/update.js')
 		this.reboot = require('./functions/util/reboot.js')
-		this.client = client,
+		this.client = client
 		this.random = require('./functions/random.js')
 		this.randomText = require('./functions/randomText.js')
 		this.randomString = require('./functions/randomString.js')
@@ -39,6 +40,7 @@ class JDaniel_Util {
 		this.isBanned = require('./functions/isBanned.js')
 		this.isVoted = require('./functions/isVoted.js')
 		this.getWebhook = require('./functions/getWebhook.js')
+		this.getSource = require('./functions/getSource.js')
 	}
 }
 module.exports = JDaniel_Util
