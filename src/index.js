@@ -12,8 +12,8 @@ class JDaniel_Util {
 	constructor (client) {
 		this.version = version,
 		this.update = require('./functions/util/update.js')
-		this.client = client,
 		this.reboot = require('./functions/util/reboot.js')
+		this.client = client,
 		this.random = require('./functions/random.js')
 		this.randomText = require('./functions/randomText.js')
 		this.randomString = require('./functions/randomString.js')
