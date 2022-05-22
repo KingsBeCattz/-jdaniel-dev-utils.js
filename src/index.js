@@ -29,7 +29,7 @@ class JDaniel_Util {
 		this.rei = require('./functions/rei.js')
 		this.error = require('./functions/error.js')
 		this.has = require('./functions/has.js')
-		this.allMembersCount = require('./functions/allMembersCount.js')(client)
+		this.allMembersCount = require('./functions/allMembersCount.js')
 		this.rule34 = require('./functions/rule34.js')
 		this.math = require('./functions/math.js')
 		this.isHex = require('./functions/isHex.js')
