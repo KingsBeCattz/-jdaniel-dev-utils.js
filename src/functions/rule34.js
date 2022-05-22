@@ -12,6 +12,7 @@ async function rule34(busqueda){
         r34.file_url = r34.file_url.replace('https://r34-json-api.herokuapp.com/images?url=', '')
         r34.sample_url = r34.sample_url.replace('https://r34-json-api.herokuapp.com/images?url=', '')
         r34.preview_url = r34.preview_url.replace('https://r34-json-api.herokuapp.com/images?url=', '')
+        r34.comments_url = r34.comments_url.replace('https://r34-json-api.herokuapp.com/comments?post_id=', 'https://rule34.xxx/index.php?page=post&s=view&id=')
         return r34
     } catch (e) {
         const obj = {

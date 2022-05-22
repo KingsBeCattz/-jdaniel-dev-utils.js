@@ -65,7 +65,7 @@ export class JDaniel_Util {
     /**
     * Envia un Error.
     */
-    public error(message: Message, error: string, type?: errorTypes): void
+    public error(message: Message, data: any, type?: errorTypes): void
     /**
     * Compruebe si su texto tiene alguna palabra especificada.
     */
