@@ -3,10 +3,10 @@ function getSource(func){
     try {
         if(func.toLowerCase() === 'update' || func.toLowerCase() === 'reboot'){
             const res = require(`./util/${func.toLowerCase()}`)
-            return res
+            return res.toString()
         } else {
             const res = require(`./${func.toLowerCase()}`)
-            return res
+            return res.toString()
         }
     } catch (e) {
         return undefined

@@ -102,4 +102,8 @@ export class JDaniel_Util {
     * Obtienes la información de un webhook (Funciona similar a un Canal (https://discord.js.org/#/docs/discord.js/stable/class/WebhookClient)).
     */
     public getWebhook(url: string): object
+    /**
+    * Obtienes el codigo fuente de la función que quieras de este package.
+    */
+    public getSource(func: string): string
 } 
