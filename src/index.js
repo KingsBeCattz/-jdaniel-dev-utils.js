@@ -1,14 +1,12 @@
-const config = require('./config.js');
 const packageName = 'Utils';
-const package = require('../package.json');
-const version = package.version
+const version = require('../package.json').version
 
 /**
 Ya que estas aquí, unete!
 https://discord.gg/nB2Je6jjbs
 */
 
-class JDaniel_Util {
+class Util {
 	constructor (client) {
 		if(!client) throw new Error(`[${packageName} Error] No se dió el Cliente (https://discord.js.org/#/docs/discord.js/stable/class/Client)`)
 		
@@ -43,7 +41,7 @@ class JDaniel_Util {
 		this.getSource = require('./functions/getSource.js')
 	}
 }
-module.exports = JDaniel_Util
+module.exports = Util
 
 /**
 Ya que estas aquí, unete!

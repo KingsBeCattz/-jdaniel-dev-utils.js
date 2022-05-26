@@ -13,7 +13,7 @@ export class JDaniel_Util {
     /**
     * Actualizas el package.
     */
-    public update();
+    public update(): void;
     /**
     * Generas un Numero al azar.
     */
