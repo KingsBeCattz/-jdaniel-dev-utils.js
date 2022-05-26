@@ -13,11 +13,11 @@ export class JDaniel_Util {
     /**
     * Actualizas el package.
     */
-    public update(min: number, max: number): number;
+    public update();
     /**
     * Generas un Numero al azar.
     */
-    public random(version?: string): string;
+    public random(min: number, max: number): number;
     /**
     * Obtiene uno o más items de un array al azar.
     */
