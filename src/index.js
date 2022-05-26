@@ -19,6 +19,7 @@ class JDaniel_Util {
 		this.random = require('./functions/random.js')
 		this.randomText = require('./functions/randomText.js')
 		this.randomString = require('./functions/randomString.js')
+		this.randomNumber = require('./functions/randomNumber.js')
 		this.ramUsage = require('./functions/ramUsage.js')
 		this.cpuUsage = require('./functions/cpuUsage.js')
 		this.loadCommands = require('./functions/loadCommands.js')

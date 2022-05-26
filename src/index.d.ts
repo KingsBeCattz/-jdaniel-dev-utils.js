@@ -27,6 +27,10 @@ export class JDaniel_Util {
     */
     public randomString(length: number): string;
     /**
+    * Genera un numero al azar de la longitud que desees.
+    */
+    public randomNumber(length: number): number;
+    /**
     * Obtiene el uso de Memoria RAM en MB y GB.
     */
     public ramUsage(decimals?: number, format?: RamTypes): string;
