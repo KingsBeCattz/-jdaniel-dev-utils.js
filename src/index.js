@@ -39,6 +39,7 @@ class Util {
 		this.isVoted = require('./functions/isVoted.js')
 		this.getWebhook = require('./functions/getWebhook.js')
 		this.getSource = require('./functions/getSource.js')
+		this.mcServer = require('./functions/mcServer.js')
 	}
 }
 module.exports = Util

@@ -8,6 +8,7 @@
     <a href="https://discord.gg/nB2Je6jjbs"><img src="https://img.shields.io/discord/875100568169889894?color=5865F2&logo=discord&logoColor=white" alt="Discord server" /></a>
     <a href="https://www.npmjs.com/package/@jdaniel-dev/utils.js"><img src="https://img.shields.io/npm/v/@jdaniel-dev/utils.js.svg?maxAge=3600" alt="npm version" /></a>
     <a href="https://www.npmjs.com/package/@jdaniel-dev/utils.js"><img src="https://img.shields.io/npm/dt/@jdaniel-dev/utils.js.svg?maxAge=3600" alt="npm downloads" /></a>
+    <a href="https://www.npmjs.com/package/@jdaniel-dev/utils.js"><img src="https://img.shields.io/librariesio/dependents/npm/@jdaniel-dev/utils.js?maxAge=3600" alt="npm dependencies" /></a>
   </p>
 </div>
 
@@ -218,5 +219,7 @@ async <util>.isVoted(Usuario (El Objeto de un usuario de discord), Token de Top.
 <util>.getWebhook(URL (URL del Webhook)) //Funciona similar a un canal (https://discord.js.org/#/docs/discord.js/stable/class/WebhookClient)
 ```
 
-# - Soporte
-[Server](https://discord.gg/nB2Je6jjbs) (El Servidor es de Soporte de Tohru, pero sera también Utilizado para Soporte de este package)
+# - Enlaces
+[Soporte](https://discord.gg/nB2Je6jjbs) (El Servidor es de Soporte de Tohru, pero sera también Utilizado para Soporte de este package)
+[Portal de Desarrolladores](https://discord.com/developers/applications)
+[Github](https://github.com/JDaniel4562/-jdaniel-dev-utils.js)
