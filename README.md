@@ -221,5 +221,7 @@ async <util>.isVoted(Usuario (El Objeto de un usuario de discord), Token de Top.
 
 # - Enlaces
 [Soporte](https://discord.gg/nB2Je6jjbs) (El Servidor es de Soporte de Tohru, pero sera también Utilizado para Soporte de este package)
+
 [Portal de Desarrolladores](https://discord.com/developers/applications)
+
 [Github](https://github.com/JDaniel4562/-jdaniel-dev-utils.js)
