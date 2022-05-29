@@ -218,6 +218,9 @@ async <util>.isVoted(Usuario (El Objeto de un usuario de discord), Token de Top.
 ```js
 <util>.getWebhook(URL (URL del Webhook)) //Funciona similar a un canal (https://discord.js.org/#/docs/discord.js/stable/class/WebhookClient)
 ```
+```js
+<util>.getSource(Función)
+```
 
 # - Enlaces
 [Soporte](https://discord.gg/nB2Je6jjbs) (El Servidor es de Soporte de Tohru, pero sera también Utilizado para Soporte de este package)
