@@ -2,6 +2,7 @@ const config = require('../config.js');
 const packageName = config.packageName
 
 function fakeHack(username){
+    if(!username || typeof username !== 'string') throw new Error(`[${packageName} Error] No se dió un nombre valido, este debe de ser un string, no ${username}`)
     let continentes = ['Norte America', 'Centro America', 'Sur America', 'Europa', 'Asia', 'Oceanía', 'Africa']
     let m = ['@gmail.com','@hotmail.com','@outlook.com','@discord.com','@pornhub.com','@tohru.ga']
     let random = require('./random.js')
