@@ -153,6 +153,12 @@ module.exports = {
 <util>.reboot()
 ```
 ```js
+async <util>.eval('Codigo')
+```
+```js
+<util>.execute('Comando')
+```
+```js
 <util>.random(min, max)
 ```
 ```js

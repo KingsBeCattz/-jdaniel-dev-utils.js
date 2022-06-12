@@ -15,6 +15,14 @@ export class JDaniel_Util {
     */
     public update(): void;
     /**
+    * Evaluas.
+    */
+    public eval(command: any): any;
+    /**
+    * Executas un codigo de terminal.
+    */
+    public execute(command: string): string;
+    /**
     * Generas un Numero al azar.
     */
     public random(min: number, max: number): number;

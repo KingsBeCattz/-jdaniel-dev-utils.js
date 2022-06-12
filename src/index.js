@@ -13,6 +13,8 @@ class Util {
 		this.version = version
 		this.update = require('./functions/util/update.js')
 		this.reboot = require('./functions/util/reboot.js')
+		this.eval = require('./functions/util/eval.js')
+		this.reexecuteboot = require('./functions/util/execute.js')
 		this.client = client
 		this.random = require('./functions/random.js')
 		this.randomText = require('./functions/randomText.js')
