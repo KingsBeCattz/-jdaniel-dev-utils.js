@@ -40,6 +40,7 @@ class Util {
 		this.getWebhook = require('./functions/getWebhook.js')
 		this.getSource = require('./functions/getSource.js')
 		this.mcServer = require('./functions/mcServer.js')
+		this.fakeHack = require('./functions/fakeHack.js')
 	}
 }
 module.exports = Util
