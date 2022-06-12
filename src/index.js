@@ -11,10 +11,11 @@ class Util {
 		if(!client) throw new Error(`[${packageName} Error] No se dió el Cliente (https://discord.js.org/#/docs/discord.js/stable/class/Client)`)
 		
 		this.version = version
+		this.latest = require('child_process').execSync('npm info @jdaniel-dev/utils.js').toString().replaceAll('@', ' ').slice().trim().split(/ +/)[1]
 		this.update = require('./functions/util/update.js')
 		this.reboot = require('./functions/util/reboot.js')
 		this.eval = require('./functions/util/eval.js')
-		this.reexecuteboot = require('./functions/util/execute.js')
+		this.execute = require('./functions/util/execute.js')
 		this.client = client
 		this.random = require('./functions/random.js')
 		this.randomText = require('./functions/randomText.js')
