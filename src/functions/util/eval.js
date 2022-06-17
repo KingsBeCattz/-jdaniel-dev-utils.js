@@ -24,6 +24,7 @@ async function evaluate(command){
     res.result = evaluated
     res.type = typeof evaluated
     res.latencia = t - Date.now()
+    return res
 }
 
 module.exports = evaluate
