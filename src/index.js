@@ -44,8 +44,8 @@ class Util {
 		this.getSource = require('./functions/getSource.js')
 		this.fakeHack = require('./functions/fakeHack.js')
 	}
-	createFunc(name, returns){
-		if(!name || typeof name !== string) throw new Error(`[${packageName} Error] Debes de dar el nombre de la función`)
+	create(name, returns){
+		if(!name || typeof name !== 'string') throw new Error(`[${packageName} Error] Debes de dar el nombre de la función`)
 		if(!returns) throw new Error(`[${packageName} Error] Debes de dar el codigo que ejecutará la función!`)
 		this[name] = returns
 	}
