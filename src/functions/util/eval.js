@@ -20,7 +20,7 @@ async function evaluate(command){
         evaluated = e
     }
     let res = {}
-    res.code = command
+    res.code = `${command}`
     res.result = evaluated
     res.type = typeof evaluated
     res.latencia = t - Date.now()

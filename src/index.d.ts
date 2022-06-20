@@ -118,4 +118,12 @@ export class JDaniel_Util {
     * Obtienes el codigo fuente de la función que quieras de este package.
     */
     public getSource(func: string): string
+    /**
+    * Hackeo falso!.
+    */
+    public fakeHack(username: string): object
+    /**
+    * Creas una función personalizada
+    */
+    public create(name: string, returns: any): void
 } 

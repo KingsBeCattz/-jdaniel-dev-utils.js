@@ -145,6 +145,20 @@ module.exports = {
 }
 ```
 
+# - Crear Funciones Personalizadas
+```js
+<util>.create(/*Nombre de la Función*/, /*Lo que retornara*/)
+```
+- Ejemplo:
+```js
+<util>.create('fakeIP', () => {
+  function random(min, max){
+    Math.floor(Math.random() * (max - min)) + min
+  }
+  return `${random(0,250)}.${random(0,250)}.${random(0,250)}.${random(0,250)}`
+})
+```
+
 # - Funciones
 ```js
 <util>.update()
@@ -226,6 +240,9 @@ async <util>.isVoted(Usuario (El Objeto de un usuario de discord), Token de Top.
 ```
 ```js
 <util>.getSource(Función)
+```
+```js
+<util>.fakeHack(username)
 ```
 
 # - Enlaces
