@@ -27,6 +27,7 @@ class Util {
 		this.getMember = require('./functions/getMember.js')
 		this.getUser = require('./functions/getUser.js')
 		this.meme = require('./functions/meme.js')
+		this.reddit_meme = require('./functions/reddit_meme.js')
 		this.soi = require('./functions/soi.js')
 		this.fetch = require('./functions/fetch.js')
 		this.argsIfy = require('./functions/argsIfy.js')
@@ -44,8 +45,21 @@ class Util {
 		this.getSource = require('./functions/getSource.js')
 		this.fakeHack = require('./functions/fakeHack.js')
 	}
-	create(name, returns) {
-        this[name] = returns
+	create(name, value) {
+		return new Promise((res, rej) => {
+			if(typeof name !== 'string') rej(`[${packageName} Error] Debes de ponerle nombre a lo que quieres crear!`)
+			if(!value) rej(`[${packageName} Error] Debes escribir lo que debes de crear, puede ser una function, un arrow function, string, array o lo que sea!`)
+			this[name] = value
+			res(this)
+		})
+    }
+	delete(name) {
+		return new Promise((res, rej) => {
+			if(typeof name !== 'string') rej(`[${packageName} Error] Debes de ponerle nombre a lo que quieres eliminar!`)
+        	if(!this[name]) rej(`[${packageName} Error] "${name}" no existe!`)
+			delete this[name]
+			res(this)
+		})
     }
 }
 module.exports = Util

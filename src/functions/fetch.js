@@ -6,9 +6,10 @@ async function fetch(URL, headers){
     if(typeof URL !== 'string') throw new Error(`[${packageName} Error] No se dió una URL valida`)
     if(headers && typeof headers !== 'object') throw new Error(`[${packageName} Error] Los headers son así: {"Nombre": "Valor"}`)
     try {
-        const result = await fetch(URL, {headers: headers})
-        const json = await result.json()
-        return json
+        return new Promise((res) => {
+            const json = await (await fetch(URL, {headers: headers})).json()
+            res(json)
+        })
     } catch (e) {
         return(`[${packageName} Error > Fetch] ${e}`)
     }

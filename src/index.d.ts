@@ -3,6 +3,7 @@ import { Message } from "discord.js";
 
 export type RamTypes = 'MB' | 'GB'
 export type errorTypes = 'reply' | 'send'
+export type Formats = 'mp4' | 'jpg' | 'png' | 'webp'
 export type argsIfyTypes = Message | string
 
 export class JDaniel_Util {
@@ -54,6 +55,10 @@ export class JDaniel_Util {
     * Meme al Azar.
     */
     public meme(): string;
+    /**
+    * Meme al Azar de r/spanishmemes.
+    */
+    public reddit_meme(filter?: Formats): object;
     /**
     * Obtiene la información de un Miembro.
     */
@@ -125,5 +130,9 @@ export class JDaniel_Util {
     /**
     * Creas una función personalizada
     */
-    public create(name: string, returns: any): void
+    public create(name: string, value: any): object
+    /**
+    * Eliminas una función
+    */
+    public delete(name: string): object
 } 
