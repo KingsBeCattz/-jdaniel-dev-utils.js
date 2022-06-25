@@ -20,6 +20,9 @@ Base del utils sacado de [Tohru](https://tohru.ga/)
 ```
 npm i @jdaniel-dev/utils.js
 ```
+```
+yarn add @jdaniel-dev/utils.js
+```
 
 # - Utilizando el Package
 ```js
