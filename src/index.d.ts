@@ -50,7 +50,7 @@ export class JDaniel_Util {
     /**
     * Carga los comandos en una carpeta y añade una propiedad de comandos a la clase cliente.
     */
-    public loadCommands(client: Client, path: string): void;
+    public loadCommands(dir: string, client: Client, r: string): Promise<object>;
     /**
     * Meme al Azar.
     */
@@ -130,9 +130,9 @@ export class JDaniel_Util {
     /**
     * Creas una función personalizada
     */
-    public create(name: string, value: any): object
+    public create(name: string, value: any): Promise<object>
     /**
     * Eliminas una función
     */
-    public delete(name: string): object
+    public delete(name: string): Promise<object>
 } 
