@@ -162,6 +162,25 @@ module.exports = {
 })
 ```
 
+# - Function Handler
+Para cargar una función desde una carpeta dada debe ser así:
+```js
+<util>.loadFunctions(Directorio)
+```
+- Ejemplo:
+```js
+<util>.loadFunction('Custom')
+```
+(`./Custom/test.js`)
+```js
+module.exports = {
+  name: 'test',
+  test(params){
+    console.log(`Testeo! ${params}`)
+  }
+}
+```
+
 # - Funciones
 ```js
 <util>.update()

@@ -135,4 +135,8 @@ export class JDaniel_Util {
     * Eliminas una función
     */
     public delete(name: string): Promise<object>
+    /**
+    * Cargas funciones de una Carpeta dada!
+    */
+    public loadFunctions(dir: string): Promise<object>
 } 

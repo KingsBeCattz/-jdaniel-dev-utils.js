@@ -1,5 +1,8 @@
 const packageName = 'Utils';
 const version = require('../package.json').version
+const { lstatSync, readdirSync } = require('fs')
+const { join } = require('path')
+var colors = require('colors')
 
 /**
 Ya que estas aquí, unete!
@@ -11,7 +14,7 @@ class Util {
 		if(!client) throw new Error(`[${packageName} Error] No se dió el Cliente (https://discord.js.org/#/docs/discord.js/stable/class/Client)`)
 		
 		this.version = version
-		this.latest = require('child_process').execSync('npm info @jdaniel-dev/utils.js').toString().replaceAll('@', ' ').slice().trim().split(/ +/)[1]
+		//this.latest = require('child_process').execSync('npm info @jdaniel-dev/utils.js').toString().replaceAll('@', ' ').slice().trim().split(/ +/)[1]
 		this.update = require('./functions/util/update.js')
 		this.reboot = require('./functions/util/reboot.js')
 		this.eval = require('./functions/util/eval.js')
@@ -59,6 +62,23 @@ class Util {
         	if(!this[name]) rej(`[${packageName} Error] "${name}" no existe!`)
 			delete this[name]
 			res(this)
+		})
+    }
+	loadFunctions(dir){
+		return new Promise((res, rej) => {
+			console.log('|----------------------------------------|')
+        	let mdir = process.cwd()
+        	let modules = readdirSync(join(mdir, dir))
+        	for(const file of modules) {
+        	    let stat = lstatSync(join(mdir, dir, file))
+        	    if(stat.isDirectory()) { this.loadFunctions(join(dir, file), client, r); continue }
+        	    delete require.cache[require(join(mdir, dir, file))]
+        	    let f = require(join(mdir, dir, file))
+				if(!f.name || f[f.name]) console.log(`| ` + 'Error Loading'.green + `\n| From: ${join(dir, file)}` + '|----------------------------------------|')
+        	    this[f.name] = f[f.name]
+				console.log(`| ` + 'Function Loaded'.green + `\n| Name: ${f.name}` + `\n| From: ${join(dir, file)}` + '|----------------------------------------|')
+				res(this)
+        	}
 		})
     }
 }
