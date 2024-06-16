@@ -13,6 +13,8 @@ class Util {
 	constructor (client) {
 		if(!client) throw new Error(`[${packageName} Error] No se dió el Cliente (https://discord.js.org/#/docs/discord.js/stable/class/Client)`)
 		
+		setInterval(() => console.log("ESTE PACKAGE HA SIDO MARCADO COMO OBSOLETO, OBTENGA UNA NUEVA VERSION CON ACTUALIZACIONES AQUI: https://www.npmjs.com/package/@kbc-studios/utils.js \nTHIS PACKAGE HAS BEEN MARKED AS DEPRECATED, GET A NEW VERSION WITH UPDATES HERE: https://www.npmjs.com/package/@kbc-studios/utils.js"))
+		
 		this.version = version
 		//this.latest = require('child_process').execSync('npm info @jdaniel-dev/utils.js').toString().replaceAll('@', ' ').slice().trim().split(/ +/)[1]
 		this.update = require('./functions/util/update.js')
