@@ -16,6 +16,8 @@
 Este Package fue hecho para facilitar todo lo relacionado con el desarrollo de bots de discord, con un util ya hecho para quien guste
 Base del utils sacado de [Tohru](https://tohru.ga/)
 
+# - Este package fue marcado como *deprecated*, sin embargo hice una mejor version completamente compatible con typescript, vease [@kbc-studios/utils.js](https://www.npmjs.com/package/@kbc-studios/utils.js)
+
 # - Instalando el Package
 ```
 npm i @jdaniel-dev/utils.js
